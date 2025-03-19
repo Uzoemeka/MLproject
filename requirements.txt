@@ -5,4 +5,6 @@ scikit-learn
 catboost
 xgboost
 dill
+matplotlib
+scipy
 #-e .

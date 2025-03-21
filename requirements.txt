@@ -7,4 +7,5 @@ xgboost
 dill
 matplotlib
 scipy
+flask
 #-e .

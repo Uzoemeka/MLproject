@@ -16,7 +16,7 @@ from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path: str =  os.path.join('artifacts', 'preproceesor.pkl')
+    preprocessor_obj_file_path: str =  os.path.join('artifacts', 'preprocessor.pkl')
 
 class DataTransformation:
     def __init__(self):
@@ -69,6 +69,10 @@ class DataTransformation:
         try:
             train_df = pd.read_csv(train_path)
             test_df = pd.read_csv(test_path)
+
+            # train_df[numerical_columns] = train_df[numerical_columns].apply(pd.to_numeric, errors='coerce')
+            # test_df[numerical_columns] = test_df[numerical_columns].apply(pd.to_numeric, errors='coerce')
+
 
             logging.info("Completed reading the training and test datasets")
 
